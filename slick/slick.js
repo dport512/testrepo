@@ -618,11 +618,17 @@
                 break;
 
             case 'next':
+                 if ($("#only-form").valid()) {  
                 slideOffset = indexOffset === 0 ? _.options.slidesToScroll : indexOffset;
                 if (_.slideCount > _.options.slidesToShow) {
                     _.slideHandler(_.currentSlide + slideOffset, false, dontAnimate);
                 }
                 break;
+                 }
+                 else{
+                 alert("no can do");
+                 break;
+                 }
 
             case 'index':
                 var index = event.data.index === 0 ? 0 :
