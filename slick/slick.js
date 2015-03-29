@@ -1989,12 +1989,18 @@
                     break;
 
                 case 'right':
+                     if ($("#only-form").valid()) {
                     slideCount = _.options.swipeToSlide ? _.checkNavigable(_.currentSlide - _.getSlideCount()) : _.currentSlide - _.getSlideCount();
                     _.slideHandler(slideCount);
                     _.currentDirection = 1;
                     _.touchObject = {};
                     _.$slider.trigger("swipe", [_, "right"]);
                     break;
+                     } else {
+                         break; 
+                     }
+                     
+                     
             }
         } else {
             if (_.touchObject.startX !== _.touchObject.curX) {
