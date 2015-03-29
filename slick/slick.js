@@ -1988,7 +1988,7 @@
                     _.touchObject = {};
                     _.$slider.trigger("swipe", [_, "left"]);
                  } else {
-                    _.$slider.trigger('setPosition', 'curLeft');
+                    _.setCSS(_.getLeft(_.currentSlide));
 
 
                      }
