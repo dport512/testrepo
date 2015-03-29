@@ -623,11 +623,10 @@
                 if (_.slideCount > _.options.slidesToShow) {
                     _.slideHandler(_.currentSlide + slideOffset, false, dontAnimate);
                 }
-                break;
                  }
                  else{
-                 break;
                  }
+                 break;
 
             case 'index':
                 var index = event.data.index === 0 ? 0 :
@@ -1980,17 +1979,17 @@
         if (_.touchObject.swipeLength >= _.touchObject.minSwipe) {
 
             switch (_.swipeDirection()) {
-                 if ($("#only-form").valid()) {
+
                 case 'left':
+                                      if ($("#only-form").valid()) {
                     slideCount = _.options.swipeToSlide ? _.checkNavigable(_.currentSlide + _.getSlideCount()) : _.currentSlide + _.getSlideCount();
                     _.slideHandler(slideCount);
                     _.currentDirection = 0;
                     _.touchObject = {};
                     _.$slider.trigger("swipe", [_, "left"]);
-                    break;
                  } else {
-                         break; 
                      }
+                     break;
 
                 case 'right':
                     slideCount = _.options.swipeToSlide ? _.checkNavigable(_.currentSlide - _.getSlideCount()) : _.currentSlide - _.getSlideCount();
