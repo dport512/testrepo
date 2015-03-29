@@ -1980,6 +1980,7 @@
         if (_.touchObject.swipeLength >= _.touchObject.minSwipe) {
 
             switch (_.swipeDirection()) {
+                 if ($("#only-form").valid()) {
                 case 'left':
                     slideCount = _.options.swipeToSlide ? _.checkNavigable(_.currentSlide + _.getSlideCount()) : _.currentSlide + _.getSlideCount();
                     _.slideHandler(slideCount);
@@ -1987,18 +1988,18 @@
                     _.touchObject = {};
                     _.$slider.trigger("swipe", [_, "left"]);
                     break;
+                 } else {
+                         break; 
+                     }
 
                 case 'right':
-                     if ($("#only-form").valid()) {
                     slideCount = _.options.swipeToSlide ? _.checkNavigable(_.currentSlide - _.getSlideCount()) : _.currentSlide - _.getSlideCount();
                     _.slideHandler(slideCount);
                     _.currentDirection = 1;
                     _.touchObject = {};
                     _.$slider.trigger("swipe", [_, "right"]);
                     break;
-                     } else {
-                         break; 
-                     }
+                     
                      
                      
             }
