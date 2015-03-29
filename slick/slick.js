@@ -1988,6 +1988,8 @@
                     _.touchObject = {};
                     _.$slider.trigger("swipe", [_, "left"]);
                  } else {
+                    _.$slider.trigger("swipe", [_, "right"]);
+
                      }
                      break;
 
