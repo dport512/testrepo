@@ -626,7 +626,6 @@
                 break;
                  }
                  else{
-                 alert("no can do");
                  break;
                  }
 
